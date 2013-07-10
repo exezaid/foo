@@ -1,0 +1,21 @@
+#Turn off that annoying start up message
+startup_message off
+
+# Turn the even more annoying whole-screen-flash-on-tab-complete "feature"
+vbell off
+# Window list at the bottom. hostname, centered tabs and redmarked active windows:
+hardstatus alwayslastline
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{=kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B}%Y-%m-%d %{W}%c %{g}]'
+#bindkey ^[, prev
+#bindkey ^[; next
+shelltitle ""
+autodetach on
+mousetrack on
+defscrollback 65000
+#screen -t "log" 0 tail -F /var/log/messages
+#screen -t "errors" 1 sh -c "tail -F /var/log/httpd/*error*.log"]]
+bindkey -k k5 prev # F5 for previous window
+bindkey -k k6 next # F6 for next window
+bindkey -k k7 split -v
+bindkey -k k8 focus
+bindkey -k k9 screen
